@@ -1,0 +1,137 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(library-3.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+
+}
+.headings {
+    position: relative;
+    color: blue;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size:55px;
+    text-align:center;
+}
+
+@keyframes example {
+    0%   {color: blue; left:0px;}
+    50%  {color: palevioletred; left:0px;}
+    100% {color: lavenderblush; left:0px;}
+}
+
+.marquee {
+    padding:25px;
+    position: relative;
+    color: darkslategray;
+    animation-name: examples;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size:15px;
+    text-align:center;
+}
+
+@keyframes examples {
+    0%   {color: darkslategray; left:0px;}
+    50%  {color: mediumturquoise; left:0px;}
+    100% {color: crimson; left:0px;}
+}
+
+.bsnl{
+opacity: 0.1;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+
+}
+.rloginbox
+{
+	width: 450;
+	height: 900px;
+	background: transparent;
+	color: beige;
+
+	top: 85%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+        box-shadow: 10px 10px  grey;
+        border-radius: 10px 20px;
+
+}
+.pic2
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+
+
+}
+h1
+{
+	margin: 0;
+	padding: 0 0 5px;
+	text-align: center;
+	font-size: 22px;
+
+}
+.rloginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+    font-size: 18px
+
+}
+.rloginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.rloginbox input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid cream;
+	background: beige;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size: 20px;
+    border-radius: 5px 5px;
+    box-shadow: 3px 3px lightgrey ;
+    
+
+}
+.rloginbox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: skyblue;
+	color: darkkhaki;
+	font-size: 18px;
+	border-radius: 20px;
+    box-shadow: 3px 3px  grey;
+}
+.rloginbox input[type="submit"]:hover
+{
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+
+}
+.rloginbox a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+
+}
+.rloginbox a:hover{
+	color: #ffc107;
+	
+}

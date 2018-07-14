@@ -1,0 +1,39 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(library-4.jpg) repeat;
+	background-position: center;
+    background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+    color:black;
+    margin-top:20px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+input[type="text"]{
+        text-align:center;
+        font-size: 16px;
+        color:black;
+        background-color:lightgoldenrodyellow;
+      }
+p {
+    position: relative;
+    color: blue;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    font-size:40px;
+    font-family:fantasy;
+    margin-left: 180px;
+}
+    @-webkit-keyframes example {
+    0%   {color:red;}
+    25%  {color:yellow;}
+    50%  {color:blue;}
+    75%  {color:green;}
+    100% {color:red;}
+}
+
+
