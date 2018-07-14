@@ -1,0 +1,53 @@
+Category:  Education
+Name: 	Vidhya Bodhan
+Description: Teaching children in govt school. Volunteers needed to teach science subject for 8th grade
+num_of_vol:  15
+date: 03/01/2018
+
+Category:  Environment
+Name: 	Haritha Haram
+Description: Planting samplings
+num_of_vol:  20
+date: 03/03/2018
+
+
+Category:  Disabled
+Name:  Helping people
+Description: Going to the hospitals and helping old and disabled people
+num_of_vol:  31
+date: 07/06/2018
+
+
+Category:  Health
+Name: 	Polio
+Description: Creating Awareness about polio to nearby houses
+num_of_vol:  11
+date: 01/05/2018
+
+
+Category:  Environment
+Name: 	Plant for the planet
+Description: Creating a nursery for schools
+num_of_vol:  19
+date: 04/02/2018
+
+
+Category:  Health
+Name: 	Eye Checkup
+Description: Eye check-up for children and old aged people
+num_of_vol:  13
+date: 07/03/2018
+
+
+Category:  Disabled
+Name: 	Career Guidance
+Description: Guiding Physically disabled people about the available courses
+num_of_vol:  22
+date: 01/04/2018
+
+
+Category:  Education
+Name: 	Donating Books	
+Description: Distribuiting books to students of 1st and 2nd grade
+num_of_vol:  18
+date: 11/05/2018
