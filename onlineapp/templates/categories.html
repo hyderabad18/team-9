@@ -1,0 +1,78 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="buttons.css">
+
+    <style>
+        
+a{
+    background-color: #f1f1f1;
+    color: black;
+    padding-top: 10px;
+    font-size: 17px;
+    margin-left: 50px;
+    padding: 10px;
+    padding-right: 10px;
+    
+}
+            a:hover{
+                color: blue;
+            }
+            
+            .heading {
+
+    color: blue;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size:40px;
+    
+}
+
+@keyframes example {
+    0%   {color: blue; left:0px;}
+    50%  {color: palevioletred; left:0px;}
+    100% {color: peru; left:0px;}
+}
+
+        </style>
+    </head>
+    <body>
+        <body>
+     <p>
+    <button onclick="goBack()" >&#8249;</button>
+    <button onclick="goForward()" >&#8250;</button>
+    <button onclick="goHome()" class="btn"><i class="fa fa-home"></i> Home</button>
+     </p>
+     <br>
+     <br>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+    <script>
+     function goForward() {
+      window.history.forward();
+    }
+    </script>
+        <script>
+     function goHome() {
+      window.open('student1.php',"_self")
+    }
+    </script>
+
+
+
+
+ <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="heading">Categories</span>
+    </h1>
+    <br>
+ <a href="#">Education</a><br><br><br>
+ <a href="#">Health</a><br><br><br>
+ <a href="#">Environment</a><br><br><br>
+ <a href="#">Enable</a><br><br><br>
+
+    </body>
+</html>
