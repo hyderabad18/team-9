@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student College List</title>
+    <style>
+        .button
+        {
+            position: absolute;
+            z-index : 5;
+        }
+    </style>
+</head>
+<body>
+    <table align="center" border="2px">
+        {%if not stud_specific%}
+            <h2>College not found</h2>
+        {%else%}
+            <tr>
+                <th>Student Name</th>
+                <th>E-Mail</th>
+                <th>Total</th>
+            </tr>
+            {%for obj in stud_specific%}
+                <tr>
+                    <td>{{obj.name}}</td>
+                    <td>{{obj.email}}</td>
+                    <td>{{obj.mocktest1__total}}<button value="Reveal Marks" onclick=""/></td>
+                </tr>
+            {%endfor%}
+        {%endif%}
+    </table>
+
+</body>
+</html>

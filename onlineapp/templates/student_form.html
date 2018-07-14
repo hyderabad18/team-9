@@ -1,0 +1,12 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<center>
+<form method = 'post' action = ''>
+    {% csrf_token %}
+    {{student_form.as_p}}
+    {{marks_form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+</center>
+{% endblock %}
