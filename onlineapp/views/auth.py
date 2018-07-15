@@ -51,7 +51,7 @@ class LoginView(View):
         # if request.user.is_authenticated:
         #     return redirect('onlineapp:firstpage')
         form = LoginForm()
-        return render(request = request, template_name='login_template.html', context={'form': form})
+        return render(request = request, template_name='login.html', context={'form': form})
 
     def post(self, request):
         form = LoginForm(request.POST)
