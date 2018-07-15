@@ -7,42 +7,59 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript">-->
+        <!--function SendData()-->
+        <!--{-->
+            <!--name = document.getElementById('name')-->
+            <!--category = document.getElementByName('category')-->
+            <!--date = document.getElementById('pwd')-->
+            <!--nov = document.getElementById('nov')-->
+            <!--console.log(name)-->
+            <!--console.log(category)-->
+         <!--}-->
+    <!--</script>-->
 </head>
 <body>
 
 <div class="container">
   <h2 style="color: red">Event Creation Details</h2><br><br>
-  <form method="post" action="#">
+    <!--{% csrf_token %}-->
+  <!--<form method="post" action = "/submitevent">-->
+    <!--{% csrf_token %}-->
+      <!--<div class="form-group">-->
+      <!--<label for="name">Event Name:</label>-->
+      <!--<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" width="50%">-->
+    <!--</div>-->
+    <!--<div class="dropdown">-->
+       <!--<label for="name">Category:</label><br>-->
+    <!--<select>-->
+  <!--<option name="category" value="Education">Education</option>-->
+  <!--<option name="category" value="Health">Health</option>-->
+  <!--<option name="category" value="Environment">Environment</option>-->
+  <!--<option name="category" value="Enabled">Enabled</option>-->
+<!--</select><br>-->
 
-    <div class="form-group">
-      <label for="name">Event Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" width="50%">
-    </div>
-    <div class="dropdown">
-       <label for="name">Category:</label><br>
-    <select>
-  <option value="Education">Education</option>
-  <option value="Health">Health</option>
-  <option value="Environment">Environment</option>
-  <option value="Enabled">Enabled</option>
-</select><br>
+  <!--</div><br>-->
+  <!--<div class="form-group">-->
+      <!--<label form="date">Event Date:</label>-->
+      <!--<input type="date" class="form-control" id="pwd" placeholder="dd/mm/yyyy" name="pwd">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+      <!--<label for="comment">Description:</label>-->
+      <!--<textarea class="form-control" rows="5" id="comment"></textarea>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+      <!--<label for="nov">Number of Volunteers:</label>-->
+      <!--<input type="number" class="form-control" id="nov" placeholder="Enter number of volunteers" name="nov" width="50%">-->
+    <!--</div>-->
 
-  </div><br>
-  <div class="form-group">
-      <label form="date">Event Date:</label>
-      <input type="date" class="form-control" id="pwd" placeholder="dd/mm/yyyy" name="pwd">
-    </div>
-    <div class="form-group">
-      <label for="comment">Description:</label>
-      <textarea class="form-control" rows="5" id="comment"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="nov">Number of Volunteers:</label>
-      <input type="number" class="form-control" id="nov" placeholder="Enter number of volunteers" name="nov" width="50%">
-    </div>
-
-    <button type="submit" class="btn btn-success">Next</button>
-  </form>
+    <!--<button onclick="SendData()" class="btn btn-success">Next</button>-->
+  <!--</form>-->
+    <form method = 'post'>
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">Next</button>
+    </form>
 </div>
 
 </body>

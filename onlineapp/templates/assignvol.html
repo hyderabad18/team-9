@@ -24,7 +24,8 @@
 
 <div class="container">
   <h2 style="color: red">Assign Volunteers</h2><br><br>
-  <form action="/action_page.php">
+  <form method = "post" action="/{{event_id}}/addpeople/">
+      {% csrf_token %}
     <div class="container">
     <p>Select the users who have registered for these events with Event ID and display the volunteers in table</p>         
  <table class="table">
@@ -38,15 +39,18 @@
       </tr>
     </thead>
     <tbody>
+    {%for user in users %}
       <tr>
-        <td><input type="checkbox" name="select"></td>
-        <td>John</td>
-        <td>john@example.com</td>
+        <td><input type="checkbox" name="{{user.user__id}}"></td>
+        <td>{{user.user__first_name}}{{user.user__last_name}}</td>
+        <td>{{user.user__email}}</td>
       </tr>
-     
+     {%endfor%}
     </tbody>
   </table>
 </div>
+      <button type="submit">Submit</button>
+  </form>
 <a href="#">Logout</a>
 
 

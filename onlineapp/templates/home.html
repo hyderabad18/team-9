@@ -7,6 +7,40 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+
+a{
+    background-color: #f1f1f1;
+    color: black;
+    padding-top: 10px;
+    font-size: 17px;
+    margin-left: 50px;
+    padding: 10px;
+    padding-right: 10px;
+
+}
+            a:hover{
+                color: blue;
+            }
+
+            .heading {
+
+    color: blue;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size:40px;
+
+}
+
+@keyframes example {
+    0%   {color: blue; left:0px;}
+    50%  {color: palevioletred; left:0px;}
+    100% {color: peru; left:0px;}
+}
+
+        </style>
+
 </head>
 <body>
 
@@ -15,10 +49,20 @@
     <h2 style="color: red"> Welcome Admin</h2><br><br>
     <form action="/action_page.php">
         <div class="form-group">
-            <a href="/create_event"><button type="button" class="btn btn-success">Create a New Event</button><br><br></a>
-            <button type="button" class="btn btn-success">Assign Volunteers</button>
+            <a href="/create_event/"><button type="button" class="btn btn-success">Create a New Event</button><br><br></a>
+            <a href = "/addvol/"><button type="button" class="btn btn-success">Assign Volunteers</button></a>
         </div>
   </form>
+    {%else%}
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="heading">Categories</span>
+    </h1>
+    <br>
+ <a href="education/">Education</a><br><br><br>
+ <a href="health/">Health</a><br><br><br>
+ <a href="environment/">Environment</a><br><br><br>
+ <a href="disable/">Disable</a><br><br><br>
+
     {%endif%}
 </div>
 

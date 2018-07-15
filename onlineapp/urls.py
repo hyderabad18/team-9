@@ -19,7 +19,7 @@ from onlineapp import views
 from django.conf import settings
 from django.conf.urls import include, url
 from onlineapp.views import *
-
+from django.views.decorators.csrf import csrf_exempt
 app_name = "onlineapp"
 
 urlpatterns = [
@@ -42,8 +42,18 @@ urlpatterns = [
    #
    #  path('api/v1/colleges/<int:college_id>/students/', StudentListRestView.as_view(), name = "student_rest_list"),
    #  path('api/v1/colleges/<int:college_id>/students/<int:student_id>', StudentChangeRestView.as_view(), name = "student_details_rest")
+
+    path('signup/', SignUpView.as_view(), name = 'signup'),
     path('login/', LoginView.as_view(), name = 'login'),
     path('firstpage/', BasepageView.as_view(), name = 'firstpage'),
-    path('create_event', CreateEventView.as_view(), name = 'create_event')
+    path('create_event/', csrf_exempt(CreateEventView.as_view()), name = 'create_event'),
+    path('firstpage/education/', EducationView.as_view(), name = 'educationview'),
+    path('firstpage/health/', HealthView.as_view(), name = 'healthview'),
+    path('firstpage/environment/', EnvironmentView.as_view(), name = 'environmentview'),
+    path('firstpage/disable/', DisableView.as_view(), name = 'disableview'),
+    path('firstpage/<int:id>/', EventsDisplayView.as_view(), name = 'eventdisplay'),
+    path('firstpage/<int:id>/haveinterest/', Haveinterest, name = 'haveinterest'),
+    path('firstpage/admin/<int:id>/', csrf_exempt(AssignVol.as_view()), name = 'assignvaol'),
+    path('<int:event_id>/addpeople', Addpeople, name = 'addpeople')
 
 ]

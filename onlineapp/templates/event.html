@@ -56,9 +56,17 @@
             <th>Event Name</th>
             <th>Event Date</th>
                 </tr>
-                    <tr> <td><a href="#">Event Name</a></td>
-                        <td>Event Date</td><br><br><br><tr>
-
+                    {%for obj in data%}
+                    {%if isadmin %}
+                        <tr> <td><a href="/firstpage/admin/{{obj.id}}/">{{obj.name}}</a></td>
+                        <td>{{obj.date}}</td>
+                        <br><br><br><tr>
+                    {%else%}
+                    <tr> <td><a href="/firstpage/{{obj.id}}/">{{obj.name}}</a></td>
+                        <td>{{obj.date}}</td>
+                        <br><br><br><tr>
+                    {%endif%}
+                    {%endfor%}
     
             </table>
 

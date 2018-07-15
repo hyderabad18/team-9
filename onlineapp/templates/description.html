@@ -21,15 +21,16 @@
 <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="heading">Description </span>
     </h1>
- 
         <p><br>
             <br>
-            This event is related to education and this is a 4 hour workshop.<br>
-            In this event each of the volunteer will work with a students and teach basics of maths...
-          
+            <!--This event is related to education and this is a 4 hour workshop.<br>-->
+            <!--In this event each of the volunteer will work with a students and teach basics of maths...-->
+            {%for desc in descrip%}
+            {{desc.description}}
+            {%endfor%}
         </p>
-        <button onclick="goBack()" >Interested</button>
-    <button onclick="goForward()" >Not Interested</button>
+        <a href = "haveinterest/"><button>Interested</button></a>
+    <button onclick="/firstpage/" >Not Interested</button>
     
     
         

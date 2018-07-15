@@ -10,6 +10,7 @@ from django.views.generic import DeleteView
 from onlineapp.forms.colleges import *
 from django import urls
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.views.decorators.csrf import csrf_protect
 
 class CollegeView(View): #as we are
 
@@ -105,7 +106,7 @@ class CreateEventView(LoginRequiredMixin, CreateView):
     template_name = 'create_new_event.html'
     form_class = CreateEventForm
     model = Event
-    success_url = urls.reverse_lazy('onlineapp:success')
+    # success_url = urls.reverse_lazy('onlineapp:firstpage')
 
     def get_context_data(self, **kwargs):
         context = super(CreateEventView, self).get_context_data(**kwargs)
@@ -116,14 +117,91 @@ class CreateEventView(LoginRequiredMixin, CreateView):
     def post(self, request, *args, **kwargs):
         form = CreateEventForm(request.POST)
         if form.is_valid():
-            chit = form.save(commit = False)
-            chit.people_present = 0
-            chit.save()
-            return redirect('chit_app:chitlist')
+            event = form.save(commit = False)
+            event.save()
+            return render(request = request, template_name='location_add.html', context= {'event_id': event.id})
         else:
             context = {'form': CreateEventForm(), **form.errors}
-            return render(request=request, template_name='addchit_form.html', context=context)
+            return render(request=request, template_name='home.html', context=context)
+
+class EducationView(LoginRequiredMixin, ListView):
+    login_url = '/login'
+    model = Event
+    template_name = 'event.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(EducationView, self).get_context_data(**kwargs)
+        context['data'] = Event.objects.values('id', 'name', 'date').filter(category='Education', progress=0)
+        if self.request.user.get_all_permissions():
+            context['isadmin'] = True
+        return context
+
+class HealthView(LoginRequiredMixin, ListView):
+    login_url = '/login'
+    model = Event
+    template_name = 'event.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(HealthView, self).get_context_data(**kwargs)
+        context['data'] = Event.objects.values('id', 'name', 'date').filter(category = 'Health', progress = 0)
+        return context
+
+class EnvironmentView(LoginRequiredMixin, ListView):
+    login_url = '/login'
+    model = Event
+    template_name = 'event.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(EnvironmentView, self).get_context_data(**kwargs)
+        context['data'] = Event.objects.values('id', 'name', 'date').filter(category = 'Environment', progress = 0)
+        return context
+
+class DisableView(LoginRequiredMixin, ListView):
+    login_url = '/login'
+    model = Event
+    template_name = 'event.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(DisableView, self).get_context_data(**kwargs)
+        context['data'] = Event.objects.values('id', 'name', 'date').filter(category = 'Disable', progress = 0)
+        return context
+
+class EventsDisplayView(LoginRequiredMixin, ListView):
+    login_url = '/login'
+    template_name = 'description.html'
+    model = Event
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(EventsDisplayView, self).get_context_data(**kwargs)
+        context['descrip'] = Event.objects.values('description').filter(id = self.kwargs['id'])
+        return context
 
 
+def Haveinterest(request, **kwargs):
+    user = request.user
+    event = Event.objects.get(id=kwargs['id'])
+    event.user.add(user)
+    return redirect('onlineapp:firstpage')
 
+# def AddVol(request):
+#     return render(request = request, template_name='categories.html')
+
+class AssignVol(LoginRequiredMixin, ListView):
+    login_url = '/login'
+    template_name = 'assignvol.html'
+    model = Event
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(AssignVol, self).get_context_data(**kwargs)
+        context['users'] = Event.objects.values('user__id' ,'user__first_name', 'user__last_name', 'user__email').filter(id = self.kwargs['id'])
+        context['event_id'] = self.kwargs['id']
+        return context
+
+def Addpeople(request, **kwargs):
+    iterator = iter(request.POST)
+    next(iterator)
+    event = Event.objects.get(id = kwargs['event_id'])
+    for checked_id in iterator:
+        user = User.objects.get(id = checked_id)
+        event.user.add(user)
 

@@ -23,5 +23,5 @@ class MockTest1Form(forms.ModelForm):
 
 class CreateEventForm(forms.ModelForm):
     class Meta:
-        models = Event
-        exclude = ['id', 'user']
+        model = Event
+        exclude = ['id', 'user', 'progress']

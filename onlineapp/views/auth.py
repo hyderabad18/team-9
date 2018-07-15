@@ -22,7 +22,7 @@ class SignUpView(View):
             )
             if user is not None:
                 login(request, user)
-                return redirect("onlineapp:college_list")
+                return redirect("onlineapp:firstpage")
             else:
                 return redirect("onlineapp:signup")
 
@@ -48,8 +48,8 @@ class SignUpView(View):
 
 class LoginView(View):
     def get(self, request):
-        if request.user.is_authenticated:
-            return redirect('onlineapp:firstpage')
+        # if request.user.is_authenticated:
+        #     return redirect('onlineapp:firstpage')
         form = LoginForm()
         return render(request = request, template_name='login_template.html', context={'form': form})
 
