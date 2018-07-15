@@ -24,7 +24,7 @@
 
 <div class="container">
   <h2 style="color: red">Assign Volunteers</h2><br><br>
-  <form method = "post" action="/{{event_id}}/addpeople/">
+  <form action="/{{event_id}}/addpeople/" method = "post" >
       {% csrf_token %}
     <div class="container">
     <p>Select the users who have registered for these events with Event ID and display the volunteers in table</p>         
@@ -53,6 +53,6 @@
   </form>
 <a href="#">Logout</a>
 
-
+</div>
 </body>
 </html>

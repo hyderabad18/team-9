@@ -205,6 +205,7 @@ def Addpeople(request, **kwargs):
     for checked_id in iterator:
         user = User.objects.get(id = checked_id)
         event.user.add(user)
+    return render(request=request, template_name='addedpeople.html')
 
 class ViewLocation(LoginRequiredMixin, CreateView):
     login_url = '/login'

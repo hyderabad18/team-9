@@ -30,3 +30,6 @@ class LocationForm(forms.ModelForm):
     class Meta:
         model = Locatiion
         exclude = ['id', 'event']
+
+class AddUser(forms.Form):
+    adduser = forms.BooleanField()
