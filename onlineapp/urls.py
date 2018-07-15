@@ -56,6 +56,7 @@ urlpatterns = [
     path('firstpage/admin/<int:id>/', csrf_exempt(AssignVol.as_view()), name = 'assignvaol'),
     path('<int:event_id>/addpeople', Addpeople, name = 'addpeople'),
     path('create_event/<int:event_id>/', ViewLocation.as_view(), name = 'location'),
+    path('addvol/', AddVol, name = 'addvol'),
     path('successpage/', Successpagered, name='successpage')
 
 ]

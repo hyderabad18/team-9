@@ -184,8 +184,8 @@ def Haveinterest(request, **kwargs):
     event.user.add(user)
     return redirect('onlineapp:firstpage')
 
-# def AddVol(request):
-#     return render(request = request, template_name='categories.html')
+def AddVol(request):
+    return render(request = request, template_name='categories.html')
 
 class AssignVol(LoginRequiredMixin, ListView):
     login_url = '/login'
