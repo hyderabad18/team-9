@@ -4,10 +4,7 @@
     <list default="true" id="29922b38-e0fb-422f-b9cd-c1aab3f4c101" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/onlineapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineapp/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineapp/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineapp/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineapp/views/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineapp/views/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineproject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineproject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/onlineapp/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +18,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onlineapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="61">
+              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
               <folding>
                 <element signature="e#637#669#0" expanded="true" />
               </folding>
@@ -33,8 +30,8 @@
       <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onlineapp/views/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+            <state relative-caret-position="316">
+              <caret line="69" column="38" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -70,15 +67,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/onlineproject/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onlineproject/urls.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,8 +94,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/onlineapp/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+            <state relative-caret-position="265">
+              <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -179,7 +167,6 @@
         <option value="$PROJECT_DIR$/onlineapp/templates/location_add.html" />
         <option value="$PROJECT_DIR$/onlineapp/forms/colleges.py" />
         <option value="$PROJECT_DIR$/onlineapp/templates/assignvol.html" />
-        <option value="$PROJECT_DIR$/onlineapp/urls.py" />
         <option value="$PROJECT_DIR$/onlineapp/views/college.py" />
         <option value="$PROJECT_DIR$/onlineapp/templates/addedpeople.html" />
         <option value="$PROJECT_DIR$/onlineapp/templates/login_template.html" />
@@ -188,6 +175,7 @@
         <option value="$PROJECT_DIR$/onlineproject/settings.py" />
         <option value="$PROJECT_DIR$/onlineproject/urls.py" />
         <option value="$PROJECT_DIR$/onlineapp/templates/login.html" />
+        <option value="$PROJECT_DIR$/onlineapp/urls.py" />
         <option value="$PROJECT_DIR$/onlineapp/templates/home.html" />
       </list>
     </option>
@@ -427,16 +415,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27912253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27912253" />
       <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="right" id="Python Console" order="3" weight="0.33509833" />
       <window_info anchor="bottom" id="Run" order="5" weight="0.329582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.35530546" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.35530546" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.33440515" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -868,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/onlineapp/views/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/onlineapp/static/polls/name.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -917,16 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/onlineapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding>
-            <element signature="e#637#669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/onlineapp/views/college.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -937,10 +907,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/onlineapp/views/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="69" column="38" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onlineapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+          <folding>
+            <element signature="e#637#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/onlineapp/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+        <state relative-caret-position="265">
+          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
