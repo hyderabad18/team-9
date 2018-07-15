@@ -25,3 +25,8 @@ class CreateEventForm(forms.ModelForm):
     class Meta:
         model = Event
         exclude = ['id', 'user', 'progress']
+
+class LocationForm(forms.ModelForm):
+    class Meta:
+        model = Locatiion
+        exclude = ['id', 'event']

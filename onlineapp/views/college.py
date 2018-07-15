@@ -119,6 +119,7 @@ class CreateEventView(LoginRequiredMixin, CreateView):
         if form.is_valid():
             event = form.save(commit = False)
             event.save()
+            return redirect('onlineapp:location', **{'event_id':event.id})
             return render(request = request, template_name='location_add.html', context= {'event_id': event.id})
         else:
             context = {'form': CreateEventForm(), **form.errors}
@@ -205,3 +206,30 @@ def Addpeople(request, **kwargs):
         user = User.objects.get(id = checked_id)
         event.user.add(user)
 
+class ViewLocation(LoginRequiredMixin, CreateView):
+    login_url = '/login'
+    template_name = 'location_add.html'
+    form_class = LocationForm
+    model = Locatiion
+
+    def get_context_data(self, **kwargs):
+        context = super(ViewLocation, self).get_context_data(**kwargs)
+        form = LocationForm()
+        context.update({'form': form})
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = LocationForm(request.POST)
+        if form.is_valid():
+            location = form.save(commit=False)
+            event = Event.objects.get(id = kwargs['event_id'])
+            location.event = event
+            location.save()
+            return redirect('onlineapp:location', **{'event_id': event.id})
+            # return render(request=request, template_name='location_add.html', context={'event_id': event.id})
+        else:
+            context = {'form': CreateEventForm(), **form.errors}
+            return render(request=request, template_name='home.html', context=context)
+
+def Successpagered(request):
+    return render(request=request, template_name='eventsuccess.html')

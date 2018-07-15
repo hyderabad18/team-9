@@ -25,17 +25,19 @@
 
 <div class="container">
   <h2 style="color: red"> Enter Location</h2><br><br>
-  <form action="/action_page.php">
+  <form method="post" action="">
     <div class="form-group">
-      <label for="location">Location:</label>
-      <input type="text" class="form-control" id="loc" placeholder="Enter location" name="loc" width="50%">
+      <!--<label for="location">Location:</label>-->
+      <!--<input type="text" class="form-control" id="loc" placeholder="Enter location" name="loc" width="50%">-->
+      {% csrf_token %}
+        {{form.as_p}}
     </div>
     <br>
     <br>
    
     <a><button type="submit" class="btn btn-success">Add Location</button></a>
-    <button class="btn btn-success">Done</button>
   </form>
+    <a href="/successpage/"><button class="btn btn-success">Done</button></a>
 </div>
 
 </body>
